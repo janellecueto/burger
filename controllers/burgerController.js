@@ -14,11 +14,25 @@ router.get("/", function(req, res){
 })
 
 router.post("/api/burgers", function(req, res){
-
+    burger.create(["name"], [req.body.name], function(result){
+        res.json({id: result.insertId});
+    })
 })
 
 router.put("/api/cats/:id", function(req, res){
+    var condition = "id = "+req.params.id;
 
+    console.log("condition", condition);
+
+    burger.update({
+        devour: req.body.devour
+    }, condition, function(result){
+        if(result.changedRows == 0){
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    })
 })
 
 router.delete("api/cats/:id", function(req, res){
