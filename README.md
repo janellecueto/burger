@@ -5,7 +5,7 @@ Northwestern University Coding Boot Camp
 Homework 14: HandleBars 
 
 ## Overview
-- Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
+- Eat-Da-Burger! is a MVC restaurant app that lets users input the names of burgers they'd like to eat.
 
 - Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
 
@@ -14,8 +14,11 @@ Homework 14: HandleBars
 - This app will store every burger in a database, whether devoured or not.
 
 ### Deployment
+https://frozen-falls-26459.herokuapp.com/
 
 ### Technologies 
 - node / express
 - handlebars
 - bootstrap.css
+- mysql
+- heroku
